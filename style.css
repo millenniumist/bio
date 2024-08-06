@@ -91,7 +91,10 @@ nav ul li a {
     gap: 24px;
 }
 
-
+.works-wrapper {
+    display: flex;
+    border-bottom: 1px solid gray;
+}
 
 .posts h2, .works h2 {
     font-size: 1.5rem;
@@ -100,14 +103,11 @@ nav ul li a {
 
 .post, .work {
     background-color: white;
-    padding: 1rem;
+    padding: 2rem;
     margin-bottom: 1rem;
     border-radius: 5px;
 }
 
-.work {
-    border-bottom: 1px solid gray;
-}
 
 .post h3, .work h3 {
     margin: 0 0 0.5rem 0;
@@ -130,4 +130,22 @@ footer {
     padding: 1rem;
     background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width:900px) {
+    .intro {
+        flex-direction: column-reverse;
+        justify-content: start;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+    .posts-wrapper, .works-wrapper{
+        flex-direction: column;
+    }
+    .posts-header-wrapper > a {
+        display: none;
+    }
+
 }
